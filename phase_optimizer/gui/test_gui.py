@@ -98,9 +98,9 @@ class QuickTestGUI:
                                               placeholder='-0.5, 0.5', layout=W)
         self.w_dof_correction = widgets.FloatSlider(value=1.0, min=0.1, max=3.0, step=0.1,
                                                      description='DOF corr:', style=S, layout=W, readout_format='.1f')
-        self.w_lr  = widgets.FloatLogSlider(value=0.05, base=10, min=-2, max=0, step=0.1,
+        self.w_lr  = widgets.FloatLogSlider(value=0.316, base=10, min=-2, max=0, step=0.1,
                                              description='Learn rate:', style=S, layout=W, readout_format='.3f')
-        self.w_ni  = widgets.IntSlider(value=500, min=10, max=2000, step=10,
+        self.w_ni  = widgets.IntSlider(value=120, min=10, max=2000, step=10,
                                         description='Iterations:', style=S, layout=W)
         self.w_mask_count   = widgets.IntSlider(value=0, min=0, max=9, description='Mask count:', style=S, layout=W)
         self.w_interleaving = widgets.Dropdown(options=['checkerboard', 'coarse1', 'coarse2', 'coarse3'],
@@ -266,8 +266,8 @@ class QuickTestGUI:
             self.w_random_seed.value = seed
         self.w_depth_in_focus.value = ', '.join(str(d) for d in p.get('depth_in_focus', [-0.5, 0.5]))
         self.w_dof_correction.value = p.get('dof_correction', 1.0)
-        self.w_lr.value  = p.get('lr', 0.05)
-        self.w_ni.value  = p.get('ni', 500)
+        self.w_lr.value  = p.get('lr', 0.316)
+        self.w_ni.value  = p.get('ni', 120)
         self.w_mask_count.value   = p.get('mask_count', 0)
         self.w_interleaving.value = p.get('interleaving', 'coarse1')
         w = p.get('weights', {})

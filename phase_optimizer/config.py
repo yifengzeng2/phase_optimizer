@@ -37,8 +37,8 @@ OPTIMIZED_DEFAULTS = {
     'mask_count': 2,
     'psf_energy_level': 1.0,
     'z_factor': 0.2,
-    'lr': 0.05,                  # learning rate
-    'ni': 500,                    # number of iterations
+    'lr': 0.316,                 # learning rate
+    'ni': 120,                   # number of iterations
     
     'depth_in_focus': [-0.5, 0.5],
     'depth_out_focus': None,
