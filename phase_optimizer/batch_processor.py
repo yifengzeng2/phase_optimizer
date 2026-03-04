@@ -34,8 +34,8 @@ def process_jobs(gui,
         dict: Results dictionary with job titles as keys
     """
     # Import here to avoid circular imports
-    from phase_generators import PhaseGenerator
-    from optics_utils import save_array, save_dict_as_json, get_best_gpu
+    from .core.phase_generator import PhaseGenerator
+    from .core.optics_utils import save_array, save_dict_as_json, get_best_gpu
 
     if device is None:
         device = get_best_gpu()
@@ -380,7 +380,7 @@ class JobBrowserGUI:
                 print("-" * 40)
                 
                 # Import visualization functions
-                from visualization import (
+                from .visualization import (
                     plot_phase, plot_2d_comparisons, plot_2d_comparisons_interactive,
                     plot_cross_sections, plot_energy_distribution
                 )

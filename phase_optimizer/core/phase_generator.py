@@ -10,15 +10,15 @@ import torch.nn.functional as F
 import textwrap
 import os
 import time
-import config
+from .. import config
 from typing import Dict, Any, List, Tuple, Optional
 from collections import defaultdict
-from optics_utils import create_checkerboard
-from optics_utils import compute_psf_centers, generate_tile_masks, generate_gaussian_psf
-from optics_utils import generate_lens_circular_masks,compute_psf_centers
-from visualization import visualize_depth_psfs_and_masks, plot_psf_row
-        
-import wave_propagation as wp
+from .optics_utils import create_checkerboard
+from .optics_utils import compute_psf_centers, generate_tile_masks, generate_gaussian_psf
+from .optics_utils import generate_lens_circular_masks, compute_psf_centers
+from ..visualization import visualize_depth_psfs_and_masks, plot_psf_row
+
+from . import wave_propagation as wp
 import math
 from torch.utils.checkpoint import checkpoint as grad_ckpt
 

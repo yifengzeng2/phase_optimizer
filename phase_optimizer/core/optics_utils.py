@@ -7,7 +7,7 @@ Utility functions for optical calculations.
 import torch
 import torch.nn.functional as F
 import numpy as np
-import config
+from .. import config
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from typing import Dict, Any, List, Tuple, Optional

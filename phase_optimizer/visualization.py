@@ -10,8 +10,8 @@ from typing import Dict, List, Tuple, Optional
 import matplotlib.patches as patches
 from IPython.display import display, clear_output
 import ipywidgets as widgets
-from optics_utils import calculate_airy_disk
-from optics_utils import compute_psf_centers
+from .core.optics_utils import calculate_airy_disk
+from .core.optics_utils import compute_psf_centers
 
 def plot_live_update(iteration: int, total_iterations: int, loss: float, optimizer):
     """Display and update images in real-time during optimization."""

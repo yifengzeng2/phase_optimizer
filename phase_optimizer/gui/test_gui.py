@@ -12,9 +12,9 @@ from IPython.display import display, clear_output
 import ipywidgets as widgets
 from typing import Optional, Dict, Any
 
-from optics_utils import compute_psf_centers, save_dict_as_json, load_dict_from_json, get_best_gpu
-from phase_generators import PhaseGenerator
-from visualization import plot_phase, plot_2d_comparisons, plot_2d_comparisons_interactive, plot_energy_distribution
+from ..core.optics_utils import compute_psf_centers, save_dict_as_json, load_dict_from_json, get_best_gpu
+from ..core.phase_generator import PhaseGenerator
+from ..visualization import plot_phase, plot_2d_comparisons, plot_2d_comparisons_interactive, plot_energy_distribution
 
 
 # =============================================================================
