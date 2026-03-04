@@ -1,0 +1,48 @@
+{
+    "M": 9,
+    "N": 4096,
+    "output_size": 4096,
+    "focal_length": 0.1,
+    "pixel_size": 4.4e-06,
+    "wavelength": 4.1500000000000005e-07,
+    "overlap_ratio": 0.0,
+    "airy_correction": 1.0,
+    "center_blend": 0.0,
+    "randomness": 0.0,
+    "random_seed": 42,
+    "depth_in_focus": [
+        -2.0,
+        -1.5,
+        -1.0,
+        -0.5,
+        0.5,
+        1.0,
+        1.5,
+        2.0
+    ],
+    "depth_out_focus": null,
+    "dof_correction": 1.0,
+    "lr": 0.31622776601683794,
+    "ni": 120,
+    "show_iters": 12,
+    "mask_count": 2,
+    "interleaving": "coarse1",
+    "masked_airy_correction": 1.0,
+    "focusing_eff_correction": 1.0,
+    "psf_energy_level": 1.0,
+    "weights": {
+        "mse": 1.0,
+        "depth_in_focus": 1.0,
+        "depth_out_focus": 0.0,
+        "masked": 1.0,
+        "eff_mean": 20.0,
+        "eff_std": 50.0
+    },
+    "shape": [
+        4096,
+        4096
+    ],
+    "roi_center_x": 2048,
+    "roi_center_y": 2048,
+    "two_pi_value": 255
+}

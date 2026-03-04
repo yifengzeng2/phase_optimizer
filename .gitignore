@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.ipynb_checkpoints/
+
+# Virtual environment
+.venv/
+
+# Generated outputs (large binary data)
+output/
+*.npy
+*.mat
+*.pkl
+*.zip
+
+# Hardware-specific / local only
+meadowlark.py
+nas_mapper.py
+hardware.py
+
+# IDE
+.idea/
+.vscode/
+*.swp

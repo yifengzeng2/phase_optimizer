@@ -1,0 +1,34 @@
+{
+  "psf_dir": "D:/Zihan/data_backup_only/260127_psf",
+  "psf_folder": "",
+  "psf_background": 97.0,
+  "recipe_dir": ".\\output",
+  "current_recipe_path": ".\\output\\M5_fresnel_F73.9\\M5_fresnel_F73.9.npy",
+  "crop_rect": [
+    260,
+    46,
+    826,
+    826
+  ],
+  "postproc_crop_rect": [
+    247,
+    258,
+    328,
+    328
+  ],
+  "save_dir": "D:/Zihan/code/slm_project/output/captures/fish_tail6_100ms",
+  "exposure": 100,
+  "data_background": 0.0,
+  "nz_layers": 81,
+  "pca_components": 31,
+  "n_iterations": 10,
+  "z_range": "0.0, 1.0",
+  "psf_power": "4",
+  "rotation_preset_index": 1,
+  "rotation_offset": 88.99939999999998,
+  "auto_cache": false,
+  "refresh_interval_ms": 250,
+  "algorithm": "Shift+Sum",
+  "selected_cache_config": "",
+  "load_psf_cache": true
+}
