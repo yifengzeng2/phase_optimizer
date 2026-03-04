@@ -101,6 +101,18 @@ class PhaseOptimizerGUI:
             layout=widgets.Layout(width='200px')
         )
 
+        self.w_ni = widgets.IntText(
+            value=120, description='Iterations:',
+            style={'description_width': '100px'},
+            layout=widgets.Layout(width='200px')
+        )
+
+        self.w_lr = widgets.FloatText(
+            value=0.316, description='Learning Rate:',
+            style={'description_width': '100px'},
+            layout=widgets.Layout(width='200px')
+        )
+
         # Randomness parameters for PSF target variation
         self.w_randomness = widgets.FloatText(
             value=0.0, description='Randomness:',
@@ -188,6 +200,7 @@ class PhaseOptimizerGUI:
             self.w_overlap_ratio,
             self.w_dof_info,  # Add DOF info display here
             self.w_airy_correction,
+            widgets.HBox([self.w_ni, self.w_lr]),
             self.randomness_controls,
             self.w_depth_label,
             self.w_depth_in_focus,
@@ -781,6 +794,8 @@ class PhaseOptimizerGUI:
         if self.w_mode.value == 'optimized':
             params['overlap_ratio'] = self.w_overlap_ratio.value
             params['airy_correction'] = self.w_airy_correction.value
+            params['ni'] = self.w_ni.value
+            params['lr'] = self.w_lr.value
             params['depth_in_focus'] = self._parse_depth_list()
             params['mask_count'] = 0
             params['randomness'] = self.w_randomness.value
@@ -874,6 +889,8 @@ class PhaseOptimizerGUI:
             if params.get('mode') == 'optimized':
                 print(f"Overlap Ratio: {params.get('overlap_ratio')}")
                 print(f"Airy Correction: {params.get('airy_correction')}")
+                print(f"Iterations: {params.get('ni', 120)}")
+                print(f"Learning Rate: {params.get('lr', 0.316)}")
                 print(f"Depth in Focus: {params.get('depth_in_focus')}")
                 print(f"Randomness: {params.get('randomness', 0.0)}")
                 seed = params.get('random_seed')
@@ -895,6 +912,8 @@ class PhaseOptimizerGUI:
         if params.get('mode') == 'optimized':
             self.w_overlap_ratio.value = params.get('overlap_ratio', 0.25)
             self.w_airy_correction.value = params.get('airy_correction', 1.0)
+            self.w_ni.value = params.get('ni', 120)
+            self.w_lr.value = params.get('lr', 0.316)
             depth_list = params.get('depth_in_focus', [])
             self.w_depth_in_focus.value = ', '.join(str(x) for x in depth_list)
             self.w_randomness.value = params.get('randomness', 0.0)
